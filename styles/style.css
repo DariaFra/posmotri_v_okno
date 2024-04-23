@@ -185,10 +185,7 @@ line-height: 22px;
 .content__list {
   position: relative;
   height: 298px;
-  overflow: hidden scroll;
-}
-.content__list::-webkit-scrollbar  {
-  width: 0;
+  overflow: auto;
 }
 .content__list-item:not(:last-of-type) {
   padding-bottom: 30px;
