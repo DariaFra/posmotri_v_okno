@@ -42,12 +42,11 @@ ol {
   list-style: none;
 }
 .content {
-  padding: 133px 30px;
   display: grid;
-  grid-template-columns: 711px 399px;
-  grid-template-rows: 78px 1fr 1fr;
+  grid-template-columns: 59% 33%;
+  grid-template-rows: 15% 1fr 1fr;
+  justify-content: center;
   column-gap: 30px;
-  justify-self: center;
 }
 .result {
   display: grid;
@@ -79,21 +78,22 @@ ol {
   border: none;
 }
 .search-form__fieldset-title {
-height: 22px;
 font-weight: 400;
 font-size: 18px;
 line-height: 22px;
 }
 .search-form__label {
+  display: flex;
+  align-items: center;
   width: fit-content;
   cursor: pointer;
 }
-.search-form__label:hover {
-  text-decoration: underline 1px;
-  text-underline-offset: 3px;
-}
 .search-form__label-text {
   appearance: none;
+}
+.search-form__label-text:hover {
+  text-decoration: underline 1px;
+  text-underline-offset: 3px;
 }
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #FFF;
@@ -111,6 +111,7 @@ line-height: 22px;
   font-weight: 400;
   font-size: inherit;
   font-family: inherit;
+  color: inherit;
 }
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
@@ -131,6 +132,7 @@ line-height: 22px;
   display: inline-block;
   width: 19px;
   height: 19px;
+  margin-right: 5px;
   vertical-align: middle;
   background-color: transparent;
   border: 1px solid #FFF;
@@ -141,12 +143,12 @@ line-height: 22px;
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 21px;
   font-size: 18px;
   text-align: center;
   color: #FFF;
   border: 1px solid #FFF;
-  height: 34px;
+  min-height: 34px;
 }
 .button:hover {
   text-decoration: underline;
@@ -185,7 +187,7 @@ line-height: 22px;
 .content__list {
   position: relative;
   height: 298px;
-  overflow: auto;
+  overflow: hidden auto;
 }
 .content__list-item:not(:last-of-type) {
   padding-bottom: 30px;
@@ -209,13 +211,17 @@ line-height: 22px;
 }
 .content__video-card {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  padding-left: 5px;
 }
 .content__video-card-description-container {
-  width: 50%;
+  inline-size: 200px;
+  overflow-wrap: break-word;
 }
 .content__video-card-title {
   font-family: 'Oswald', sans-serif;
+  padding-top: 5px;
   padding-bottom: 6px;
   font-weight: 700;
   font-size: 30px;
@@ -230,7 +236,7 @@ line-height: 22px;
   color: #FFF;
 }
 .content__video-card-thumbnail {
-  width:398px;
+  width: 194px;
   height: 107px;
   object-fit: contain;
   object-position: right center;
